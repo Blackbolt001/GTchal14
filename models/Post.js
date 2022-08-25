@@ -13,22 +13,22 @@ Post.init(
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: { len:[1]}
+      allowNull: false
     },
-  },
-  content: {
+    content: {
     type: DataTypes.STRING,
     allowNull: false,
-    validate: { len:[1]}
-  },  
+    },  
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id'
-  }},
+  }}
+},
   {
+  
     sequelize,
     timestamps: false,
     freezeTableName: true,

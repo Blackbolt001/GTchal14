@@ -48,6 +48,7 @@ attributes:['username'],
     res.status(404).json({message:'No such Posts exists!'});
     return;
   }
-  res.json(dbPostData;)
+  res.json(dbPostData);
+});
 })
 module.exports = router;
