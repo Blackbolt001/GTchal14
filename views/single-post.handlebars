@@ -1,0 +1,26 @@
+    <article class="post">
+        {{> post-info post }}
+    </article>
+        {{#if loggedIn}}
+    <article class="comment-creator">
+    <div class="title"></div>
+    <div class="body">
+    <form class="comment-form">
+    <div>
+    <label for="comment-body">Comment</label>
+    <textarea name="comment-body"></textarea>
+    </div>
+
+    <div>
+    <button type="submit">Submit</button>
+    </div>
+
+    </form>
+    </div>
+    </article>
+            {{/if}}
+
+            {{> comments post.comments}}
+            {{#if loggedIn}}
+    <script src="/javascript/comment.js"></script>
+            {{/if}}
