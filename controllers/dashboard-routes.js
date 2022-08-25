@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const sequelize = require('..config/connection');
 const { User,Post,Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -17,7 +16,7 @@ router.get('/', withAuth, (req, res) => {
     attributes:['username']}
   
 },
-{ model:User,attrubutes:['username']}
+{ model:User,attributes:['username']}
 ]})
 .then(dbPostData => {
   const posts = dbPostData.map(post => post.get({ plain:true}));
